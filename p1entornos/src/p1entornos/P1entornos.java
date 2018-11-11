@@ -30,7 +30,7 @@ public class P1entornos {
           cad=cad.toUpperCase(); //PARA CONVERTIR UNA CADENA EN MAYUSCULA 
          num=numcaracter(cad,letra);
           System.out.println("numero de veces que se repite "+letra+" es "+num);
-          System.out.println("desea contuniar(si/no) : ");
+          System.out.println("desea contuniar(si/no): ");
           continuar=sc.nextLine();
      }while(continuar.equalsIgnoreCase("si"));
     }
