@@ -18,8 +18,10 @@ public class P1entornos {
         char letra;
         int num;
         int i;
+        String continuar;
         String cad;
      Scanner sc= new Scanner(System.in);
+     do{
          System.out.println("letra: ");
           letra=sc.nextLine().charAt(0);
           System.out.println("cadena: ");
@@ -28,6 +30,9 @@ public class P1entornos {
           cad=cad.toUpperCase(); //PARA CONVERTIR UNA CADENA EN MAYUSCULA 
          num=numcaracter(cad,letra);
           System.out.println("numero de veces que se repite "+letra+" es "+num);
+          System.out.println("desea contuniar(si/no) : ");
+          continuar=sc.nextLine();
+     }while(continuar.equalsIgnoreCase("si"));
     }
     public static int numcaracter(String cadena,char car){
         int j;
@@ -37,6 +42,6 @@ public class P1entornos {
                   cont++;
               }
         }
-        return cont; 
+        return cont;
     }
 }
