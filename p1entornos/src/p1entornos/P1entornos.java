@@ -16,7 +16,7 @@ public class P1entornos {
      */
     public static void main(String[] args) {
         char letra;
-        int num=0;
+        int num;
         int i;
         String cad;
      Scanner sc= new Scanner(System.in);
@@ -26,12 +26,17 @@ public class P1entornos {
           cad=sc.nextLine();
           letra=Character.toUpperCase(letra); // PARA CONVERTIR UNA LETRA EN MAYUSCULA
           cad=cad.toUpperCase(); //PARA CONVERTIR UNA CADENA EN MAYUSCULA 
-          for (i=0;i<cad.length();i++){
-              if (cad.charAt(i)== letra){
-                  num++;
-              }
-          }
-          System.out.println("numero de veces que se repite "+letra+" es: "+num);
+         num=numcaracter(cad,letra);
+          System.out.println("numero de veces que se repite "+letra+" es "+num);
     }
-    
+    public static int numcaracter(String cadena,char car){
+        int j;
+        int cont=0;
+        for (j=0;j<cadena.length();j++){
+              if (cadena.charAt(j)== car){
+                  cont++;
+              }
+        }
+        return cont; 
+    }
 }
